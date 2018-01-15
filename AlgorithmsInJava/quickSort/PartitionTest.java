@@ -34,7 +34,7 @@ public class PartitionTest
 
 		out.println("Using bidirectionalInteratorPartition:");
 		// 
-		int pivot = Partition.twoWayPartition(t1,0,t1.length -1);
+		int pivot = Partition.threeWayPartition(t1,0,t1.length -1);
 		out.println("p= " + pivot + ",pValue= " + t1[pivot] + ",res= " + isCrrect(pivot,t1));
 		//
 		out.println("Show: ");
