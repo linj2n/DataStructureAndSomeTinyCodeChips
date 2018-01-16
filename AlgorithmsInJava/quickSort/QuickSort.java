@@ -65,7 +65,7 @@ public class QuickSort
     public static void sort(Comparable[] a, int lo, int hi)
     {
         if (lo >= hi) return;
-        int p = hoarePartition2(a, lo, hi);
+        int p = Partition.threeWayPartition(a, lo, hi);
         sort(a,lo,p-1);
         sort(a,p+1,hi);
     }
