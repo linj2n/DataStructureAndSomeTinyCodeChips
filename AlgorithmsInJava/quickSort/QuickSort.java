@@ -1,4 +1,4 @@
-package quickSort;
+package AlgorithmsInJava.quickSort;
 public class QuickSort
 {
     private static boolean less(Comparable v, Comparable w)

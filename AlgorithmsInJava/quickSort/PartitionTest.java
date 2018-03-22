@@ -1,4 +1,4 @@
-package quickSort;
+package AlgorithmsInJava.quickSort;
 import static java.lang.System.*;
 public class PartitionTest
 {
@@ -45,47 +45,47 @@ public class PartitionTest
 	}
 	public static void test0()
 	{
-		Integer[] test = {5,5};
+		Integer[] test = {1};
 		testAndShow(test);
 	}
 	public static void test1()
 	{
-		Integer[] test = {5,6};
+		Integer[] test = {1,2};
 		testAndShow(test);
 	}
 	public static void test2()
 	{
-		Integer[] test = {5,3};
+		Integer[] test = {2,1};
 		testAndShow(test);
 	}
 	public static void test3()
 	{
-		Integer[] test = {5,5,5};
+		Integer[] test = {2,2};
 		testAndShow(test);
 	}
 	public static void test4()
 	{
-		Integer[] test = {5,3,3};
+		Integer[] test = {2,2,2};
 		testAndShow(test);
 	}
 	public static void test5()
 	{
-		Integer[] test = {5,6,6};
+		Integer[] test = {1,2,3,4};
 		testAndShow(test);
 	}
 	public static void test6()
 	{
-		Integer[] test = {5,6,3};
+		Integer[] test = {4,3,2,1};
 		testAndShow(test);
 	}
 	public static void test7()
 	{
-		Integer[] test = {5,3,6};
+		Integer[] test = {2,1,3,4,5};
 		testAndShow(test);
 	}
 	public static void test8()
 	{
-		Integer[] test = {5,3,4,6,7};
+		Integer[] test = {2,4,5,1,3};
 		testAndShow(test);
 	}
 	public static void test9()

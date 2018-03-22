@@ -1,4 +1,4 @@
-package quick3WaySort;
+package AlgorithmsInJava.quick3WaySort;
 public class Quick3WaySortTest
 {
 	// some test-functions and print-functions

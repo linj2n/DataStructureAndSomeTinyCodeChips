@@ -1,4 +1,4 @@
-package quick3WaySort;
+package AlgorithmsInJava.quick3WaySort;
 public class Quick3WaySort
 {
     public static void exch(Comparable[] a, int i, int j)

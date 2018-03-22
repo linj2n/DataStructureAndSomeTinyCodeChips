@@ -1,5 +1,4 @@
-package mergeSort;
-
+package AlgorithmsInJava.mergeSort;
 public class MergeSortTest
 {
 	// some test-functions and print-functions

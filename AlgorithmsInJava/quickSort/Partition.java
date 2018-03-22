@@ -1,4 +1,4 @@
-package quickSort;
+package AlgorithmsInJava.quickSort;
 
 public class Partition
 {
@@ -18,47 +18,59 @@ public class Partition
                 exch(a,curr++,i++);
             else
                 ++curr;
-        }
+       	}
         return i;
     }
     // using bidirectional iterator
     public static int twoWayPartition(Comparable[] a, int lo, int hi)
     {
-        if (lo == hi) return lo;
-        if (hi - lo == 1)
-        {
-            if (a[lo].compareTo(a[hi]) > 0) 
-            {   // a[lo] > a[hi] 
-                exch(a,lo,hi); return hi;
-            }else
-                return lo;
-        }
+        // if (lo == hi) return lo;
+        // if (hi - lo == 1)
+        // {
+        //     if (a[lo].compareTo(a[hi]) > 0) 
+        //     {   // a[lo] > a[hi] 
+        //         exch(a,lo,hi); return hi;
+        //     }else
+        //         return lo;
+        // }
 
-        Comparable pValue = a[lo];
-        int i = lo + 1, j = hi; // as the pivot element, do not alter a[lo].
-        while(true)
-        {
-            while (true)
-            {
-                if (i >= hi || a[i].compareTo(pValue) > 0)  // a[i] > pValue
-                    break;
-                else
-                    ++i;
-            }
-            while (true)
-            {
-                if (j <= lo || a[j].compareTo(pValue) < 0)  // a[j] < pValue
-                    break;
-                else
-                    --j;
-            }
-            if (i >= j)
-                break;
-            else
-                exch(a,i,j);
+        // Comparable pValue = a[lo];
+        // int i = lo + 1, j = hi; // as the pivot element, do not alter a[lo].
+        // while(true)
+        // {
+        //     while (true)
+        //     {
+        //         if (i >= hi || a[i].compareTo(pValue) > 0)  // a[i] > pValue
+        //             break;
+        //         else
+        //             ++i;
+        //     }
+        //     while (true)
+        //     {
+        //         if (j <= lo || a[j].compareTo(pValue) < 0)  // a[j] < pValue
+        //             break;
+        //         else
+        //             --j;
+        //     }
+        //     if (i >= j)
+        //         break;
+        //     else
+        //         exch(a,i,j);
+        // }
+        // exch(a,lo,j);   // updates the location of pivot element.
+        // return j;
+        if (lo >= hi) return lo;
+        Comparable pivot = a[lo];
+        int i = lo,j = hi;
+        while (i < j) {
+            while (i < j && a[j].compareTo(pivot) >= 0 ) { j--; }
+            if (i < j) { a[i] = a[j]; }
+            while (i < j && a[i].compareTo(pivot) <= 0) { i++; }
+            if (i < j) { a[j] = a[i]; }
         }
-        exch(a,lo,j);   // updates the location of pivot element.
-        return j;
+        a[i] = pivot;
+        return i;
+
     }
     // using forward iterator
     public static int oneWayPartition(Comparable[] a, int lo, int hi)

@@ -1,4 +1,4 @@
-package quickSort;
+package AlgorithmsInJava.quickSort;
 public class QuickSortTest
 {
 	// some test-functions and print-functions

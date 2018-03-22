@@ -1,4 +1,4 @@
-package selectionSort;
+package AlgorithmsInJava.selectionSort;
 
 public class SelectionSortTest
 {
