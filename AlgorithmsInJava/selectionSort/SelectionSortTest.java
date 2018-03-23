@@ -7,13 +7,25 @@ public class SelectionSortTest
     {
         System.out.println("---------------------");
         System.out.print("before: ");
-        SelectionSort.show(a);
+        show(a);
         SelectionSort.sort(a);
 
         System.out.print("after: ");
-        SelectionSort.show(a);
-        System.out.println(SelectionSort.isSorted(a));
+        show(a);
+        System.out.println(isSorted(a));
     }
+    public static boolean isSorted(Comparable[] a) {
+        for (int i = 1; i < a.length; i++)
+            if (SelectionSort.less(a[i],a[i - 1]))
+                return false;
+        return true;
+    }
+    public static void show(Comparable[] a) {
+        for (Comparable e: a)
+            System.out.print(e.toString() + " ");
+        System.out.println();
+    }
+
     public static void test0()
     {
         Integer []t = {1,2,3,4,5,6,7};
