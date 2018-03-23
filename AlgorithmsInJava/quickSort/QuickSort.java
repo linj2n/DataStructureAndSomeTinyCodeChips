@@ -62,12 +62,26 @@ public class QuickSort
         exch(a,lo,s);
         return s;
     }
+    public static int twoWayPartition(Comparable[] a, int lo, int hi)
+    {
+        if (lo >= hi) return lo;
+        Comparable pivot = a[lo];
+        int i = lo,j = hi;
+        while (i < j) {
+            while (i < j && a[j].compareTo(pivot) >= 0 ) { j--; }
+            if (i < j) { a[i] = a[j]; }
+            while (i < j && a[i].compareTo(pivot) <= 0) { i++; }
+            if (i < j) { a[j] = a[i]; }
+        }
+        a[i] = pivot;
+        return i;
+
+    }
     public static void sort(Comparable[] a, int lo, int hi)
     {
         if (lo >= hi) return;
-        int p = Partition.threeWayPartition(a, lo, hi);
+        int p = twoWayPartition(a, lo, hi);
         sort(a,lo,p-1);
         sort(a,p+1,hi);
     }
-
 }
