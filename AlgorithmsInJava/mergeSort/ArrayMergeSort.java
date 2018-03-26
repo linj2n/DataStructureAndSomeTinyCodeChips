@@ -41,11 +41,12 @@ public class ArrayMergeSort
 		sort(a, 0, a.length - 1);
 	}
 	public static void sort(Comparable[] a, int lo, int hi) {
-		if (lo < hi) {
-			int mid = lo + (hi - lo) / 2;
-			sort(a,lo,mid);
-			sort(a,mid + 1, hi);
-			merge(a,lo,mid,hi);
-		}
+		if (lo <= hi) 
+			return ;
+			
+		int mid = lo + (hi - lo) / 2;
+		sort(a,lo,mid);
+		sort(a,mid + 1, hi);
+		merge(a,lo,mid,hi);
 	}
 }
