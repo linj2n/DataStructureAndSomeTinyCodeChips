@@ -15,21 +15,21 @@ public class DigitsParseToHan {
             return hanDigit[integer];
         }
 
-        StringBuilder sb = new StringBuilder();
+        String res = "";
         int i = -1;
 
-        while (integer != 0) {
+        while (integer != 0 && i < 3) {
             int digit = integer % 10;
             if (digit != 0 && i != -1) {
-                sb.append(hanUnit[i]);
+                res = hanUnit[i] + res;
             }
-            if (digit != 0 || ( sb.length() != 0 && sb.charAt(sb.length() - 1) != '零')) {
-                sb.append(hanDigit[digit]);
+            if (digit != 0 || ( res.length() != 0 && res.charAt(0) != '零')) {
+                res = hanDigit[digit] + res;
             }
             ++ i;
             integer /= 10;
         }
-        return sb.reverse().toString();
+        return res;
     }
     public static String parseToHan(String in) {
 
