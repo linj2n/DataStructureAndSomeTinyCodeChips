@@ -1,7 +1,8 @@
 package AlgorithmsInJava.binarySearch;
 public class BinarySearchTest {
     public static boolean resultForTest(Comparable[] a, Comparable key) {
-        return key.equals(BinarySearch.search(a,key));
+        int target = BinarySearch.search(a,key);
+        return target >= 0 && target < a.length && key.equals(a[target]);
     }
     public static void test(Comparable[] a, Comparable key) {
         System.out.print("test: { ");

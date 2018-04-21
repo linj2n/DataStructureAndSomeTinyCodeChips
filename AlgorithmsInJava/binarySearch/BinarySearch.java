@@ -3,19 +3,19 @@
 // 2. lo, hi 的更新
 package AlgorithmsInJava.binarySearch;
 public class BinarySearch {
-    public static Comparable search(Comparable[] a, Comparable key) {
+    public static int search(Comparable[] a, Comparable key) {
         return search(a,0,a.length - 1,key);
     }
-    public static Comparable search(Comparable[] a, int beg, int end, Comparable key) {
+    public static int search(Comparable[] a, int beg, int end, Comparable key) {
         int lo = beg, hi = end - 1;
-        if (lo > hi || a == null) return null;
+        if (lo > hi || a == null) return -1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             int cmp = a[mid].compareTo(key);
             if (cmp < 0) lo = mid + 1;
             else if (cmp > 0) hi = mid - 1;
-            else return a[mid];
+            else return mid;
         }
-        return (lo >= beg || hi <= end - 1) ? a[lo] : null;
+        return lo;
     }
 }

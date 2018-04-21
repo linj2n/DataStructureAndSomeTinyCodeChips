@@ -46,6 +46,12 @@ public class QuickSortTest
 		Integer []t = {7};
 		testAndPrint(t,0,t.length - 1);
 	}
+	public static void test6()
+	{
+		Integer []t = {54,35,48,36,27,12,44,44,8,14,26,17,28};
+		testAndPrint(t,0,t.length - 1);
+	}
+
 
 
 	public static void main(String[] args) 
@@ -56,6 +62,7 @@ public class QuickSortTest
 		QuickSortTest.test3();
 		QuickSortTest.test4();
 		QuickSortTest.test5();
+		QuickSortTest.test6();
 
 	}
 }
