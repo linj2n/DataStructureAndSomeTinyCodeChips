@@ -81,10 +81,10 @@ public class DigitsParseToHan {
         return res;
     }
     private static void formatCheck(String in) {
-        // insert codes..
+        // TODO insert codes..
     }
     private static void rangeCheck(String in, int maxRange) {
-        // insert codes
+        // TODO insert codes
     }
 }
 
